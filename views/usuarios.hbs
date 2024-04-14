@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos de Usuarios</title>
+    <style>
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .hombres {
+            background-color: #2C3456;
+            color: white;
+        }
+        .mujeres {
+            background-color: #BEA0BC;
+            color: white;
+        }
+    </style>
+</head>
+<body class="container">
+    <h1>Datos de Usuarios</h1>
+    <h2>Hombres</h2>
+    <ul class="hombres">
+        {{#each Hombres}}
+        <li> {{index @index}}. Nombre: {{this.Nombre}} - Apellido: {{this.Apellido}} - ID: {{this.ID}} - Timestamp: {{this.Timestamp}} </li>
+        {{/each}}
+    </ul>
+    <h2>Mujeres</h2>
+    <ul class="mujeres">
+        {{#each Mujeres}}
+        <li> {{index @index}}. Nombre: {{this.Nombre}} - Apellido: {{this.Apellido}} - ID: {{this.ID}} - Timestamp: {{this.Timestamp}} </li>
+        {{/each}}
+    </ul>
+</body>
+</html>
